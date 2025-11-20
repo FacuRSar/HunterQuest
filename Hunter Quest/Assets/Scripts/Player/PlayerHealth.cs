@@ -20,4 +20,12 @@ public class PlayerHealth : MonoBehaviour
             SceneManager.LoadScene("GameOver");
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            currentHealth -= 10;
+        }
+
+    }
 }
